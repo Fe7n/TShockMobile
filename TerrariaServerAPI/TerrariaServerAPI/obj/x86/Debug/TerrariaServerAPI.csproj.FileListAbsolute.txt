@@ -1,0 +1,19 @@
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\bin\Debug\TerrariaServer.exe
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\bin\Debug\TerrariaServer.pdb
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\bin\Debug\OTAPI.dll
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\bin\Debug\Newtonsoft.Json.xml
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\obj\x86\Debug\TerrariaServerAPI.csprojAssemblyReference.cache
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\obj\x86\Debug\TerrariaServerAPI.csproj.CoreCompileInputs.cache
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\obj\x86\Debug\TerrariaServerAPI.csproj.CopyComplete
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\obj\x86\Debug\TerrariaServer.exe
+D:\Download\TERRARIA\TerrariaAPI-Server-pe\TerrariaServerAPI\obj\x86\Debug\TerrariaServer.pdb
+C:\Users\Feyn\Desktop\refine for git\TShock-pe - Copy\TerrariaServerAPI\TerrariaServerAPI\bin\Debug\TerrariaServer.exe
+C:\Users\Feyn\Desktop\refine for git\TShock-pe - Copy\TerrariaServerAPI\TerrariaServerAPI\bin\Debug\TerrariaServer.pdb
+C:\Users\Feyn\Desktop\refine for git\TShock-pe - Copy\TerrariaServerAPI\TerrariaServerAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Feyn\Desktop\refine for git\TShock-pe - Copy\TerrariaServerAPI\TerrariaServerAPI\bin\Debug\OTAPI.dll
+C:\Users\Feyn\Desktop\refine for git\TShock-pe - Copy\TerrariaServerAPI\TerrariaServerAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Feyn\Desktop\refine for git\TShock-pe - Copy\TerrariaServerAPI\TerrariaServerAPI\obj\x86\Debug\TerrariaServerAPI.csproj.CopyComplete
+C:\Users\Feyn\Desktop\refine for git\TShock-pe - Copy\TerrariaServerAPI\TerrariaServerAPI\obj\x86\Debug\TerrariaServer.exe
+C:\Users\Feyn\Desktop\refine for git\TShock-pe - Copy\TerrariaServerAPI\TerrariaServerAPI\obj\x86\Debug\TerrariaServer.pdb
+C:\Users\Feyn\Desktop\refine for git\TShock-pe - Copy\TerrariaServerAPI\TerrariaServerAPI\obj\x86\Debug\TerrariaServerAPI.csprojAssemblyReference.cache
