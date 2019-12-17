@@ -1850,27 +1850,27 @@ namespace TShockAPI
 
 		private static Dictionary<byte, short> NPCAddBuffTimeMax = new Dictionary<byte, short>()
 		{
-			{ BuffID.Poisoned, 3600 },
+			{ BuffID.Poisoned, 1800 }, //3600 was too much, 1800 is enough
 			{ BuffID.OnFire, 1200 },
 			{ BuffID.CursedInferno, 420 },
-			{ BuffID.Frostburn, 900 },
-			{ BuffID.Ichor, 1200 },
-			{ BuffID.Venom, 1260 },
+			{ BuffID.Frostburn, 1800 }, //900 can cause kick
+			{ BuffID.Ichor, 1200 }, 
+			{ BuffID.Venom, 1800 }, //1260 always results in kick since it equals 21s, but venom staff inflict 30s
 			{ BuffID.Midas, 120 },
-			{ BuffID.Wet, 1500 },
-			{ BuffID.Slimed, 1500 },
+			{ BuffID.Wet, 1800 }, //1500 causes kick
+			{ BuffID.Slimed, 1800 }, //same as above
 			{ BuffID.Lovestruck, 1800 },
 			{ BuffID.Stinky, 1800 },
 			{ BuffID.SoulDrain, 30 },
-			{ BuffID.ShadowFlame, 660 },
+			{ BuffID.ShadowFlame, 480 }, //not sure why it's 660, since 480 would be enough, check wiki
 			{ BuffID.DryadsWard, 120 },
 			{ BuffID.BoneJavelin, 900 },
-			{ BuffID.StardustMinionBleed, 900 },
+			{ BuffID.StardustMinionBleed, 600 }, //900 was apparently causing kicks, but wiki says max is 9s
 			{ BuffID.DryadsWardDebuff, 120 },
-//			{ BuffID.BetsysCurse, 600 },
-//			{ BuffID.Oiled, 540 },
-			{ BuffID.Confused, 360 }, // Brain of Confusion Internal Item ID: 3223
-			{ BuffID.Daybreak, 300 } // Solar Eruption Item ID: 3473, Daybreak Item ID: 3543
+//			{ BuffID.BetsysCurse, 600 }, //unavailable in 1.3.0.7
+//			{ BuffID.Oiled, 540 }, //same as above
+			{ BuffID.Confused, 300 }, // Brain of Confusion Internal Item ID: 3223. why 360? 300 would have been enough
+			{ BuffID.Daybreak, 900 } // Solar Eruption Item ID: 3473, Daybreak Item ID: 3543. 300 is too low here
 		};
 
 		/// <summary>
