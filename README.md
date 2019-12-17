@@ -1,6 +1,6 @@
 # TShockMobile
 
- compilable version of tsock compatible with mobile
+ Compileable version of tsock compatible with mobile
 
 
 # Compile:
