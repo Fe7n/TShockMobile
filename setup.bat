@@ -9,19 +9,19 @@ echo shk //.. Build TShockAPI
 echo rls //.. Release in /MobileServer!
 echo exit //. 
 set /p mode= Enter command:
+cls
 if "%mode%"=="all" goto all
 if "%mode%"=="srv" goto srv
 if "%mode%"=="shk" goto shk
 if "%mode%"=="rls" goto rls
 if "%mode%"=="exit" goto exit
-cls
 echo "Invalid input"
 echo ...
 pause >nul
 goto menu
 
 :all
-echo You are about to Build all projects and pack a release!
+echo Press any key to Build all projects and pack the Release!
 echo ...
 pause >nul
 
@@ -29,23 +29,23 @@ pause >nul
 RMDIR /S /Q TerrariaServerAPI\TerrariaServerAPI\bin\Debug
 %path% TerrariaServerAPI\TerrariaServerAPI\TerrariaServerAPI.csproj /t:rebuild
 if "%mode%"=="all" goto shk
+echo ...
+pause >nul
 goto menu
 
 :shk
 RMDIR /S /Q TShockAPI\bin\Debug
 %path% TShockAPI\TShockAPI.csproj /t:rebuild
 if "%mode%"=="all" goto rls
+echo ...
+pause >nul
 goto menu
 
 :rls
 RMDIR /S /Q MobileServer
-echo ...
-pause >nul
 mkdir MobileServer
 mkdir MobileServer\ServerPlugins
 %systemroot%\System32\robocopy PB\ MobileServer /E
-echo ...
-pause >nul
 move TShockAPI\bin\Debug\BCrypt.Net.dll MobileServer\ServerPlugins
 move TShockAPI\bin\Debug\HttpServer.dll MobileServer\ServerPlugins
 move TShockAPI\bin\Debug\Mono.Data.Sqlite.dll MobileServer\ServerPlugins
