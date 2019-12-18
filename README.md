@@ -9,6 +9,8 @@
 
 *Make sure the path to MSBuild.exe is correct or the setup will fail*
 
+> <a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16">Click here if you don't have MSBuild.exe</a>
+
 - **Run setup.bat**
 
 *You may now enter one of the following commands:*
