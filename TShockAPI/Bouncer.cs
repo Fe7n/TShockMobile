@@ -1862,10 +1862,10 @@ namespace TShockAPI
 			{ BuffID.Lovestruck, 1800 },
 			{ BuffID.Stinky, 1800 },
 			{ BuffID.SoulDrain, 30 },
-			{ BuffID.ShadowFlame, 480 }, //not sure why it's 660, since 480 would be enough, check wiki
+			{ BuffID.ShadowFlame, 600 }, //changed to 600 just to be safe to avoid kick
 			{ BuffID.DryadsWard, 120 },
 			{ BuffID.BoneJavelin, 900 },
-			{ BuffID.StardustMinionBleed, 600 }, //900 was apparently causing kicks, but wiki says max is 9s
+			{ BuffID.StardustMinionBleed, 900 }, //changed back to 900, 600 kicks every time
 			{ BuffID.DryadsWardDebuff, 120 },
 //			{ BuffID.BetsysCurse, 600 }, //unavailable in 1.3.0.7
 //			{ BuffID.Oiled, 540 }, //same as above
