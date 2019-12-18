@@ -343,17 +343,13 @@ namespace TShockAPI
 		{
 			var found = new List<NPC>();
 			NPC npc = new NPC();
-			string nameLower = name.ToLowerInvariant();
+			string nameLower = name.ToLower();
 			for (int i = -17; i < Main.maxNPCTypes; i++)
 			{
-				string englishName = EnglishLanguage.GetNpcNameById(i).ToLowerInvariant();
-
-				npc.SetDefaults(i);
-				if (npc.FullName.ToLowerInvariant() == nameLower || npc.TypeName.ToLowerInvariant() == nameLower
-					|| nameLower == englishName)
+				npc.netDefaults(i);
+				if (npc.name.ToLower() == nameLower)
 					return new List<NPC> { npc };
-				if (npc.FullName.ToLowerInvariant().StartsWith(nameLower) || npc.TypeName.ToLowerInvariant().StartsWith(nameLower)
-					|| englishName?.StartsWith(nameLower) == true)
+				if (npc.name.ToLower().StartsWith(namelower))
 					found.Add((NPC)npc.Clone());
 			}
 			return found;
@@ -423,16 +419,15 @@ namespace TShockAPI
 		{
 			Item item = new Item();
 			item.SetDefaults(0);
-			string lowerName = name.ToLowerInvariant();
+			string lowerName = name.ToLower();
 			var found = new List<int>();
 			for (int i = FirstItemPrefix; i <= LastItemPrefix; i++)
 			{
 				item.prefix = (byte)i;
-				string prefixName = item.AffixName().Trim().ToLowerInvariant();
-				string englishName = EnglishLanguage.GetPrefixById(i).ToLowerInvariant();
-				if (prefixName == lowerName || englishName == lowerName)
+				string prefixName = item.AffixName().Trim().ToLower();
+				if (prefixName == lowerName)
 					return new List<int>() { i };
-				else if (prefixName.StartsWith(lowerName) || englishName?.StartsWith(lowerName) == true) // Partial match
+				else if (prefixName.StartsWith(lowerName) // Partial match
 					found.Add(i);
 			}
 			return found;
