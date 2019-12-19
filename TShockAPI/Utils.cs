@@ -349,7 +349,7 @@ namespace TShockAPI
 				npc.netDefaults(i);
 				if (npc.name.ToLower() == nameLower)
 					return new List<NPC> { npc };
-				if (npc.name.ToLower().StartsWith(namelower))
+				if (npc.name.ToLower().StartsWith(nameLower))
 					found.Add((NPC)npc.Clone());
 			}
 			return found;
@@ -427,7 +427,7 @@ namespace TShockAPI
 				string prefixName = item.AffixName().Trim().ToLower();
 				if (prefixName == lowerName)
 					return new List<int>() { i };
-				else if (prefixName.StartsWith(lowerName) // Partial match
+				else if (prefixName.StartsWith(lowerName)) // Partial match
 					found.Add(i);
 			}
 			return found;
