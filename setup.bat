@@ -7,7 +7,7 @@ echo all //.. Build 2 projects, clean and release in /MobileServer!
 echo srv //.. Build TerrariaServerAPI
 echo shk //.. Build TShockAPI
 echo rls //.. Release in /MobileServer!
-echo exit //. 
+echo exit/off
 set /p mode= Enter command:
 cls
 if "%mode%"=="all" goto all
@@ -15,6 +15,7 @@ if "%mode%"=="srv" goto srv
 if "%mode%"=="shk" goto shk
 if "%mode%"=="rls" goto rls
 if "%mode%"=="exit" goto exit
+if "%mode%"=="off" goto exit
 echo "Invalid input"
 echo ...
 pause >nul

@@ -542,6 +542,15 @@ namespace TShockAPI
 							continue;
 						}
 
+						// Should prevent doors from breaking without having to give the ignore.sendtilesquare permission!
+						if ((tile.type == TileID.ClosedDoor && (newtile.Type == TileID.OpenDoor || !newtile.Active)) ||
+							(tile.type == TileID.OpenDoor && (newtile.Type == TileID.ClosedDoor || !newtile.Active)) ||
+							(!tile.active() && newtile.Active && (newtile.Type == TileID.OpenDoor || newtile.Type == TileID.ClosedDoor)))
+						{
+							args.Handled = false;
+							return;
+						}
+
 						// Fixes the Flower Boots not creating flowers issue
 						if (size == 1 && args.Player.Accessories.Any(i => i.active && i.netID == ItemID.FlowerBoots))
 						{
