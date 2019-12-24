@@ -542,22 +542,6 @@ namespace TShockAPI
 							continue;
 						}
 
-						// Should prevent doors from breaking without having to give the ignore.sendtilesquare permission (still not safe)
-						if ((tile.type == TileID.ClosedDoor && (newtile.Type == TileID.OpenDoor || !newtile.Active)) ||
-							(tile.type == TileID.OpenDoor && (newtile.Type == TileID.ClosedDoor || !newtile.Active)) ||
-							(!tile.active() && newtile.Active && (newtile.Type == TileID.OpenDoor || newtile.Type == TileID.ClosedDoor)))
-						{
-					//		Main.tile[realx, realy].type = newtile.Type;
-					//		Main.tile[realx, realy].frameX = newtile.FrameX;
-					//		Main.tile[realx, realy].frameY = newtile.FrameY;
-					//		Main.tile[realx, realy].active(newtile.Active);
-					//		TSPlayer.All.SendTileSquare(tileX, tileY, size-3);
-					//		WorldGen.RangeFrame(tileX, tileY, tileX + size, tileY + size);
-							args.Handled = false;
-							return;
-							//changed = true;
-						}
-
 						// Fixes the Flower Boots not creating flowers issue
 						if (size == 1 && args.Player.Accessories.Any(i => i.active && i.netID == ItemID.FlowerBoots))
 						{
@@ -661,6 +645,34 @@ namespace TShockAPI
 							Main.tile[realx, realy].active(newtile.Active);
 							changed = true;
 						}
+						
+						// Should fix the door disappearance collision bug, probably still exploitable but this is good enough for now						
+						if ((tile.type == TileID.ClosedDoor && (newtile.Type == TileID.OpenDoor || !newtile.Active)) ||
+							(tile.type == TileID.OpenDoor && (newtile.Type == TileID.ClosedDoor || !newtile.Active)) ||
+							(!tile.active() && newtile.Active && (newtile.Type == TileID.OpenDoor || newtile.Type == TileID.ClosedDoor)))
+						{
+							Main.tile[realx, realy].type = newtile.Type;
+							Main.tile[realx, realy].frameX = newtile.FrameX;
+							Main.tile[realx, realy].frameY = newtile.FrameY;
+							Main.tile[realx, realy].active(newtile.Active);
+							args.Handled = false;
+							return;
+							//changed = true;
+						}
+						
+						// Tall gates getting stuck fix
+                        			if ((tile.type == TileID.TallGateClosed && (newtile.Type == TileID.TallGateOpen || !newtile.Active)) ||
+                            				(tile.type == TileID.TallGateOpen && (newtile.Type == TileID.TallGateClosed || !newtile.Active)) ||
+                            				(!tile.active() && newtile.Active && (newtile.Type == TileID.TallGateOpen || newtile.Type == TileID.TallGateClosed)))
+                        			{
+                            				Main.tile[realx, realy].type = newtile.Type;
+						        Main.tile[realx, realy].frameX = newtile.FrameX;
+						        Main.tile[realx, realy].frameY = newtile.FrameY;
+						        Main.tile[realx, realy].active(newtile.Active);
+                                                        //changed = true; 
+                            			        args.Handled = false;
+                            		                return;
+					         }
 					}
 				}
 
