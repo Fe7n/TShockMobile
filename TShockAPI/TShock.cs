@@ -57,7 +57,7 @@ namespace TShockAPI
 		/// <summary>VersionNum - The version number the TerrariaAPI will return back to the API. We just use the Assembly info.</summary>
 		public static readonly Version VersionNum = Assembly.GetExecutingAssembly().GetName().Version;
 		/// <summary>VersionCodename - The version codename is displayed when the server starts. Inspired by software codenames conventions.</summary>
-		public static readonly string VersionCodename = "Zombie";
+		public static readonly string VersionCodename = "FeyMobileBuild";
 
 		/// <summary>SavePath - This is the path TShock saves its data in. This path is relative to the TerrariaServer.exe (not in ServerPlugins).</summary>
 		public static string SavePath = "tshock";
@@ -666,6 +666,13 @@ namespace TShockAPI
 				{
 					path = p;
 				}
+			};
+
+			//Default path override
+			if (path == null)
+			{
+				Main.WorldPath = "Worlds";
+				ServerApi.LogWriter.PluginWriteLine(this, ":   Default world path set to \"\\Worlds\"", TraceLevel.Info);
 			};
 
 			//Prepare the parser with all the flags available
