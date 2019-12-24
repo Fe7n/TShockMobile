@@ -1375,8 +1375,8 @@ namespace TShockAPI
 
 			if (tsplr.ReceivedInfo)
 			{
-				if (!tsplr.SilentKickInProgress && tsplr.State >= 3)
-					Utils.Broadcast(tsplr.Name + " has left.", Color.Yellow);
+//				if (!tsplr.SilentKickInProgress && tsplr.State >= 3)
+//					Utils.Broadcast(tsplr.Name + " has left.", Color.Yellow);
 				Log.Info("{0} disconnected.", tsplr.Name);
 
 				if (tsplr.IsLoggedIn && !tsplr.IsDisabledPendingTrashRemoval && Main.ServerSideCharacter && (!tsplr.Dead || tsplr.TPlayer.difficulty != 2))
@@ -1628,15 +1628,15 @@ namespace TShockAPI
 				Log.Info("{0} ({1}) from '{2}' group from '{3}' joined. ({4}/{5})", player.Name, player.IP,
 									   player.Group.Name, player.Country, TShock.Utils.GetActivePlayerCount(),
 									   TShock.Config.MaxSlots);
-				if (!player.SilentJoinInProgress)
-					Utils.Broadcast(string.Format("{0} ({1}) has joined.", player.Name, player.Country), Color.Yellow);
+//				if (!player.SilentJoinInProgress)
+//					Utils.Broadcast(string.Format("{0} ({1}) has joined.", player.Name, player.Country), Color.Yellow);
 			}
 			else
 			{
 				Log.Info("{0} ({1}) from '{2}' group joined. ({3}/{4})", player.Name, player.IP,
 									   player.Group.Name, TShock.Utils.GetActivePlayerCount(), TShock.Config.MaxSlots);
-				if (!player.SilentJoinInProgress)
-					Utils.Broadcast(player.Name + " has joined.", Color.Yellow);
+//				if (!player.SilentJoinInProgress)
+//					Utils.Broadcast(player.Name + " has joined.", Color.Yellow);
 			}
 
 			if (Config.DisplayIPToAdmins)
