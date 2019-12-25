@@ -1369,6 +1369,18 @@ namespace TShockAPI
 				args.Handled = true;
 				return;
 			}
+			// Fix for false positive kick when adding debuff to Star Cell (big)
+			if (id != NPCID.StardustCellBig)
+			{
+				args.Handled = true;
+				return;
+			}
+			// Fix for false positive kick when adding debuff to Plantera's Tentacle
+			if (id != NPCID.PlanterasTentacle)
+			{
+				args.Handled = true;
+				return;
+			}
 
 			NPC npc = Main.npc[id];
 
@@ -1881,24 +1893,24 @@ namespace TShockAPI
 			{ BuffID.Poisoned, 1800 }, //3600 was too much, 1800 is enough
 			{ BuffID.OnFire, 1200 },
 			{ BuffID.CursedInferno, 420 },
-			{ BuffID.Frostburn, 1800 }, //900 can cause kick
+			{ BuffID.Frostburn, 900 },
 			{ BuffID.Ichor, 1200 }, 
-			{ BuffID.Venom, 1800 }, //1260 always results in kick since it equals 21s, but venom staff inflict 30s
+			{ BuffID.Venom, 1800 },
 			{ BuffID.Midas, 120 },
-			{ BuffID.Wet, 1800 }, //1500 causes kick
-			{ BuffID.Slimed, 1800 }, //same as above
+			{ BuffID.Wet, 1500 }, 
+			{ BuffID.Slimed, 1500 }, 
 			{ BuffID.Lovestruck, 1800 },
 			{ BuffID.Stinky, 1800 },
 			{ BuffID.SoulDrain, 30 },
-			{ BuffID.ShadowFlame, 600 }, //changed to 600 just to be safe to avoid kick
+			{ BuffID.ShadowFlame, 660 },
 			{ BuffID.DryadsWard, 120 },
 			{ BuffID.BoneJavelin, 900 },
-			{ BuffID.StardustMinionBleed, 900 }, //changed back to 900, 600 kicks every time
+			{ BuffID.StardustMinionBleed, 900 },
 			{ BuffID.DryadsWardDebuff, 120 },
-//			{ BuffID.BetsysCurse, 600 }, //unavailable in 1.3.0.7
-//			{ BuffID.Oiled, 540 }, //same as above
-			{ BuffID.Confused, 300 }, // Brain of Confusion Internal Item ID: 3223. why 360? 300 would have been enough
-			{ BuffID.Daybreak, 900 } // Solar Eruption Item ID: 3473, Daybreak Item ID: 3543. 300 is too low here
+//			{ BuffID.BetsysCurse, 600 }, 
+//			{ BuffID.Oiled, 540 }, 
+			{ BuffID.Confused, 360 }, 
+			{ BuffID.Daybreak, 900 }
 		};
 
 		/// <summary>
