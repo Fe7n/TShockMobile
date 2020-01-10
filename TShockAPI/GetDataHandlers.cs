@@ -2106,6 +2106,8 @@ namespace TShockAPI
 
 			if (pulley[3])
 				args.TPlayer.vortexStealthActive = true;
+			else
+				args.TPlayer.vortexStealthActive = false;
 
 			args.TPlayer.gravDir = pulley[4] ? 1f : -1f;
 
