@@ -1369,20 +1369,16 @@ namespace TShockAPI
 				args.Handled = true;
 				return;
 			}
-			// Fix for false positive kick when adding debuff to Star Cell (big)
-			if (id != NPCID.StardustCellBig)
-			{
-				args.Handled = true;
-				return;
-			}
-			// Fix for false positive kick when adding debuff to Plantera's Tentacle
-			if (id != NPCID.PlanterasTentacle)
-			{
-				args.Handled = true;
-				return;
-			}
-
+			
 			NPC npc = Main.npc[id];
+			
+			Item selectedItem = args.Player.SelectedItem;
+			
+			if (selectedItem.netID == ItemID.SolarEruption)
+			{
+				args.Handled = false;
+				return;
+			}
 
 			if (npc == null)
 			{
