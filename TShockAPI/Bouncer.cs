@@ -1370,15 +1370,15 @@ namespace TShockAPI
 				return;
 			}
 			// Fix for false positive kick when adding debuff to Star Cell (big)
-			if (id != NPCID.StardustCellBig)
+			if (id == NPCID.StardustCellBig)
 			{
-				args.Handled = true;
+				args.Handled = false;
 				return;
 			}
 			// Fix for false positive kick when adding debuff to Plantera's Tentacle
-			if (id != NPCID.PlanterasTentacle)
+			if (id == NPCID.PlanterasTentacle)
 			{
-				args.Handled = true;
+				args.Handled = false;
 				return;
 			}
 
