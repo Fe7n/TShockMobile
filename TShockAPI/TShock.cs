@@ -1069,9 +1069,7 @@ namespace TShockAPI
 						{
 							player.Disable(flags: flags);
 						}
-						//else if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(player.TPlayer.inventory[player.TPlayer.selectedItem].netID), player))
-						else if (Itembans.ItemIsBanned(player.TPlayer.inventory[player.TPlayer.selectedItem].Name, player))
-
+						else if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(player.TPlayer.inventory[player.TPlayer.selectedItem].netID), player))
 						{
 							player.Disable($"holding banned item: {player.TPlayer.inventory[player.TPlayer.selectedItem].Name}", flags);
 							player.SendErrorMessage($"You are holding a banned item: {player.TPlayer.inventory[player.TPlayer.selectedItem].Name}");
@@ -1087,8 +1085,7 @@ namespace TShockAPI
 						// Please don't remove this for the time being; without it, players wearing banned equipment will only get debuffed once
 						foreach (Item item in player.TPlayer.armor)
 						{
-							//if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(item.type), player))
-							if (Itembans.ItemIsBanned(item.Name, player))
+							if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(item.type), player))
 							{
 								player.SetBuff(BuffID.Frozen, 330, true);
 								player.SetBuff(BuffID.Stoned, 330, true);
@@ -1101,8 +1098,7 @@ namespace TShockAPI
 						}
 						foreach (Item item in player.TPlayer.dye)
 						{
-							//if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(item.type), player))
-							if (Itembans.ItemIsBanned(item.Name, player))
+							if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(item.type), player))
 							{
 								player.SetBuff(BuffID.Frozen, 330, true);
 								player.SetBuff(BuffID.Stoned, 330, true);
@@ -1115,8 +1111,7 @@ namespace TShockAPI
 						}
 						foreach (Item item in player.TPlayer.miscEquips)
 						{
-							//if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(item.type), player))
-							if (Itembans.ItemIsBanned(item.Name, player))
+							if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(item.type), player))
 							{
 								player.SetBuff(BuffID.Frozen, 330, true);
 								player.SetBuff(BuffID.Stoned, 330, true);
@@ -1129,8 +1124,7 @@ namespace TShockAPI
 						}
 						foreach (Item item in player.TPlayer.miscDyes)
 						{
-							//if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(item.type), player))
-							if (Itembans.ItemIsBanned(item.Name, player))
+							if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(item.type), player))
 							{
 								player.SetBuff(BuffID.Frozen, 330, true);
 								player.SetBuff(BuffID.Stoned, 330, true);
@@ -1150,8 +1144,7 @@ namespace TShockAPI
 						{
 							player.Disable(flags: flags);
 						}
-						//else if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(player.TPlayer.inventory[player.TPlayer.selectedItem].netID), player))
-						else if (Itembans.ItemIsBanned(player.TPlayer.inventory[player.TPlayer.selectedItem].Name, player))
+						else if (Itembans.ItemIsBanned(EnglishLanguage.GetItemNameById(player.TPlayer.inventory[player.TPlayer.selectedItem].netID), player))
 						{
 							player.Disable($"holding banned item: {player.TPlayer.inventory[player.TPlayer.selectedItem].Name}", flags);
 							player.SendErrorMessage($"You are holding a banned item: {player.TPlayer.inventory[player.TPlayer.selectedItem].Name}");
