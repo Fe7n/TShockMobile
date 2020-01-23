@@ -71,6 +71,21 @@ namespace TShockAPI.Localization
 //					LanguageManager.Instance.SetLanguage(culture);
 //				}
 //			}
+			LanguageManager.Instance.SetLanguage("en-US");
+			Lang.InitializeLegacyLocalization();
+			for (int i = -48; i < 3930; i++)
+			{
+				EnglishLanguage.ItemNames.Add(i, Lang.GetItemNameValue(i));
+			}
+			for (int j = -17; j < 580; j++)
+			{
+				EnglishLanguage.NpcNames.Add(j, Lang.GetNPCNameValue(j));
+			}
+			foreach (FieldInfo fieldInfo in typeof(Main).Assembly.GetType("Terraria.ID.PrefixID").GetFields())
+				if (!fieldInfo.Name.Equals("Count", StringComparison.Ordinal))
+			{
+				EnglishLanguage.Prefixs.Add((int)fieldInfo.GetValue(null), fieldInfo.Name);
+			}
 		}
 
 		/// <summary>
