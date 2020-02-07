@@ -1371,14 +1371,6 @@ namespace TShockAPI
 			}
 			
 			NPC npc = Main.npc[id];
-			
-			Item selectedItem = args.Player.SelectedItem;
-			
-			if (selectedItem.netID == ItemID.SolarEruption)
-			{
-				args.Handled = false;
-				return;
-			}
 
 			if (npc == null)
 			{
@@ -1389,6 +1381,13 @@ namespace TShockAPI
 			if (args.Player.IsBeingDisabled())
 			{
 				args.Handled = true;
+				return;
+			}
+			
+			// Fix for false positive kicks
+			if (npc.type == NPCID.PlanterasTentacle || npc.type == NPCID.StardustCellBig) 
+			{
+				args.Handled = false;
 				return;
 			}
 
