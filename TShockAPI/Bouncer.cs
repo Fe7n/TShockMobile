@@ -1900,11 +1900,11 @@ namespace TShockAPI
 			{ BuffID.ShadowFlame, 660 },
 			{ BuffID.DryadsWard, 120 },
 			{ BuffID.BoneJavelin, 900 },
-			{ BuffID.StardustMinionBleed, 900 },
+			{ BuffID.StardustMinionBleed, 540 },
 			{ BuffID.DryadsWardDebuff, 120 },
 //			{ BuffID.BetsysCurse, 600 }, 
 //			{ BuffID.Oiled, 540 }, 
-			{ BuffID.Confused, 360 }, 
+			{ BuffID.Confused, 450 },
 			{ BuffID.Daybreak, 900 }
 		};
 
