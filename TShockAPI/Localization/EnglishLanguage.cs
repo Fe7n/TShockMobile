@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Terraria;
 using Terraria.Localization;
+using System.Reflection;
 
 namespace TShockAPI.Localization
 {
