@@ -1383,13 +1383,6 @@ namespace TShockAPI
 				args.Handled = true;
 				return;
 			}
-			
-			// Fix for false positive kicks
-			if (npc.type == NPCID.PlanterasTentacle || npc.type == NPCID.StardustCellBig) 
-			{
-				args.Handled = false;
-				return;
-			}
 
 			bool detectedNPCBuffTimeCheat = false;
 
