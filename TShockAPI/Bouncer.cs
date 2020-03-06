@@ -1405,7 +1405,7 @@ namespace TShockAPI
 					if (type != BuffID.Lovestruck && type != BuffID.Stinky && type != BuffID.DryadsWard &&
 						type != BuffID.Wet && type != BuffID.Slimed)
 					{
-						detectedNPCBuffTimeCheat = true;
+						//detectedNPCBuffTimeCheat = true;
 					}
 				}
 			}
