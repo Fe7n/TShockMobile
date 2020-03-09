@@ -34,7 +34,7 @@
 
 - **Enjoy!**
 
-**Build Instructions (Legacy):**
+## Build Instructions (Legacy):
 1. Open and build, TShock.4.OTAPI.sln
 2. Open and build, TShock.sln
 3. Go to TShockAPI\bin\Debug
