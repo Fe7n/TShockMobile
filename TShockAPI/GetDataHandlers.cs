@@ -2293,10 +2293,10 @@ namespace TShockAPI
 			var id = args.Data.ReadInt16();
 			var owner = args.Data.ReadInt8();
 
-			if (owner > 16)
-			{
-				args.Player.Kick("Not PE Client.", true, true);
-			}
+			//if (owner > 16)
+			//{
+			//	args.Player.Kick("Not PE Client.", true, true);
+			//}
 
 			if (id < 0 || id > 400)
 				return true;
